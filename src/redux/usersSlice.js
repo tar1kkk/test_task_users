@@ -241,6 +241,10 @@ const initialState = {
     ],
     countries: [
         {
+            "name": "All countries",
+            "value": "ALL"
+        },
+        {
             "name": "Ukraine",
             "value": "UA"
         },
