@@ -1,20 +1,18 @@
-import './App.css';
-import {Route, Router, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import EditUsers from "./pages/editUsers";
 import Users from "./pages/users";
 import Header from "./components/Header";
+import './index.css';
 
 function App() {
     return (
-        <div>
+        <BrowserRouter>
             <Header/>
-            <Router>
-                <Routes>
-                    <Route path="/edit-user" element={<EditUsers/>}/>
-                    <Route path="/" element={<Users/>}/>
-                </Routes>
-            </Router>
-        </div>
+            <Routes>
+                <Route path="/" element={<EditUsers />} />
+                <Route path="/users" element={<Users />} />
+            </Routes>
+        </BrowserRouter>
     );
 }
 
